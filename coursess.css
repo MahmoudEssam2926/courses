@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background-image:url("certificates/gifgit.gif");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    padding:30px;
+}
+
+/* الجاليري */
+
+.gallery{
+
+    width:100%;
+    max-width:1500px;
+
+    margin:0 auto 1000px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3, 450px);
+
+    justify-content:center;
+
+    gap:25px;
+}
+
+/* الصور */
+
+.gallery img{
+
+    width:450px;
+    height:320px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.45);
+
+    transition:0.35s;
+}
+
+/* Hover */
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.7);
+
+    cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:1450px){
+
+.gallery{
+
+grid-template-columns:repeat(2,450px);
+
+}
+
+}
+
+@media(max-width:950px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery img{
+
+width:100%;
+height:auto;
+
+}
+
+}
